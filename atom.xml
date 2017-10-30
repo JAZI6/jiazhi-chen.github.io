@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://JAZI6.github.io/"/>
-  <updated>2017-10-03T10:20:25.519Z</updated>
+  <updated>2017-10-03T10:20:33.103Z</updated>
   <id>https://JAZI6.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>HTML   meta标签的用途，属性，功能</title>
-    <link href="https://JAZI6.github.io/2017/09/22/HTML-meta%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E9%80%94%EF%BC%8C%E5%B1%9E%E6%80%A7%EF%BC%8C%E5%8A%9F%E8%83%BD/"/>
-    <id>https://JAZI6.github.io/2017/09/22/HTML-meta标签的用途，属性，功能/</id>
-    <published>2017-09-22T11:53:05.000Z</published>
-    <updated>2017-10-03T10:20:25.519Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="关于meta的介绍"><a href="#关于meta的介绍" class="headerlink" title="关于meta的介绍"></a>关于meta的介绍</h2><h3 id="meta的用途"><a href="#meta的用途" class="headerlink" title="meta的用途"></a>meta的用途</h3><p>我认为meta就好比网页的明信片，它是网页html文档的从属介绍属性，那么当然一个网页可以有多个meta以便更好地介绍该网页相关信息给搜索引擎看。需要meta这样做的目的是为了SEO（搜索引擎优化）,也就是说meta和SEO是息息相关的，但SEO也不只看meta，它会具体解析网页其他东西以便抓取。</p><h3 id="meta的属性"><a href="#meta的属性" class="headerlink" title="meta的属性"></a>meta的属性</h3><p>属性有三个，分别是：</p><blockquote><p>name，content，http-equiv</p><h3 id="meta的功能"><a href="#meta的功能" class="headerlink" title="meta的功能"></a>meta的功能</h3><ol><li><em>name</em> :告诉搜索引擎这个meta的类型</li><li><em>content</em> :告诉搜索引擎关于name和http-equiv属性值的具体内容</li></ol></blockquote><p>以下是name的属性取值和content对应name属性值的内容的分析：</p><p>1 ) Keywords:关键字,即告诉搜索引擎,这个网页的主题是什么。<br>每个关键字之间,应该用用英文的逗号”,”分隔开。</p><blockquote><p>例如:</p><meta name="Keywords" content="关键字,关键字1,关键字2,关键字3,...,..."></blockquote><p>当数个meta元素提供文档语言的从属信息时,搜索引擎会使用lang特性来过滤并通过用户的语言优先参照来显示搜索结果。</p><blockquote><p>例如:</p><p><meta name="Kyewords" content="vacation,greece,sunshine"></p><meta name="Kyewords" content="vacances,grè:ce,soleil"></blockquote><p>2）Description:简介,即告诉搜索引擎,这个网页的大致内容。就好像Keywords是作文标题,Description再详细说一下作文的内容、优势等等。</p><blockquote><p>例如：<br>　　<meta name="Description" content="这个网页讲述了的META用法..."></p></blockquote><p>3）Robots:纯粹写给搜索引擎看的,因为Keywords和Description,人类还可以看懂,而Robots是非专业人士所无法理解的。<br>　　当name为Robots时,Content可选参数有<br>　　index:当前页面可以被抓取<br>　　follow:被当前页面内所链接的页面可以抓取<br>　　noindex:当前页面不可以被抓取<br>　　nofollow:被当前页面内所链接的页面不可以抓取<br>　　由于Content的内容可以是多选的,例如CONTENT=”INDEX,FOLLOW”,所以上述这四个参数,共可以组成4种不同的双选结果。</p><blockquote><p>例如：<br>　　<meta name="Robots" content="index,follow">可以写成<meta name="Robots" content="all"><br>　　<meta name="Robots" content="noindex,nofollow">可以写成<meta name="Robots" content="none"></p></blockquote><p>4）Author:作者,即告诉搜索引擎,这个页面的作者是谁,一般那种文章性质的页面,这个属性被应用得比较多。</p><blockquote><p>例如：</p><meta name="Author" content="czBin,11year@Gmail.com"></blockquote><p>5）Copyright:版权,告诉搜索引擎,这个页面的版权是属于谁的。</p><blockquote><p>例如：</p><meta name="Copyright" content="版权信息"></blockquote><p>6）Generator:制作软件,难道搜索引擎连这个也需要知道?用FrontPage和Dreamweaver制作出的页面,抓取方式不同吗，这个是我比较困惑的东西。</p><blockquote><p>例如：</p><meta name="Generator" content="PCDATA|FrontPage|"></blockquote><p>7）revisit-after:更新时间,即告诉搜索引擎,这个页面多长时间会更新,到时候,需要来重新抓取</p><blockquote><p>例如:</p><meta name="revisit-after" content="2 days"></blockquote><ol><li><em>http-equiv</em> :meta的http-equiv属性,其作用类似于http协议,它会告诉浏览器一些关于字符设定,页面刷新,cookie,和缓存等等相关信息。</li></ol><p>以下是http-equiv的属性取值和content对应http-equiv属性值的内容的分析：</p><p>1）Content-Type:声明页面所适用的的字符集,以及页面文档属性。</p><blockquote><p>例如:<br>　　<meta http-equiv="Content-Type" content="text/html; Charset=gb2312"><br>　　告诉浏览器,该页面为HTML类文档,并且,适用gb2312(中文)作为默认字符。</p></blockquote><p>2）Refresh:设置页面刷新或自动跳转的时间。</p><blockquote><p>例如:<br>　　<meta http-equiv="Refresh" content="60"><br>　　Content=”60”的意思是说,60秒后,页面刷新<br>　　<meta http-equiv="Refresh" content="10; Url=http://www.isinwin.cn"><br>　　Content=”10 的意思是说,10秒后,网页将自动跳转。</p></blockquote><p>3）Expires:设定网页的过期时间,当网页过期后,必须重新读取页面信息。</p><blockquote><p>例如:<br>　　<meta http-equiv="Expires" content="Fri, 15 Jun 2007 01:13:13 GMT"><br>　　<meta http-equiv="Expires" content="0"><br>　　时间格式必须为GMT标准时间,Content设置为0则代表该网页永不过期。</p></blockquote><p>4）Pragma:禁止浏览器缓存网页。</p><blockquote><p>例如:<br>　　<meta http-equiv="Pragma" content="No-cach"><br>　　禁止浏览器缓存页面（但是浏览者同样可以保存页面）</p></blockquote><p>5）Set-Cookie :设定cookie的过期时间。</p><blockquote><p>例如:<br>　　<meta http-equiv="Set-Cookie" content="cookievalue=xxx; expires=Wednesday,　21-Oct-98 16:14:21 GMT; path=/"></p></blockquote><p>6）Window-target:强制页面在当前窗口以独立页面显示。</p><blockquote><p>例如:<br>　　<meta http-equiv="Widow-target" content="_top"><br>　　这个属性是用来防止别人在框架里调用你的页面。Content选项:_blank、_top、_self、_parent。</p></blockquote><p><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a1pYWlpbXlpSW1lSKxoaRQgEBg" target="_blank" rel="external">有问题邮件探讨一下呗，点击这里</a><br><a href="https://www.jiazhi-chen.top" target="_blank" rel="external">我的博客链接，欢迎大家放心来参观和提建议</a><br> PS:好像有啥隐私设置，我又不是黑客，头大。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;关于meta的介绍&quot;&gt;&lt;a href=&quot;#关于meta的介绍&quot; class=&quot;headerlink&quot; title=&quot;关于meta的介绍&quot;&gt;&lt;/a&gt;关于meta的介绍&lt;/h2&gt;&lt;h3 id=&quot;meta的用途&quot;&gt;&lt;a href=&quot;#meta的用途&quot; class=&quot;he
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>我想变得更好</title>
