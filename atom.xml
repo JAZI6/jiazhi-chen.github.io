@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>JiaZhi-Chen&#39;s blog</title>
+  
+  <subtitle>保持好奇，学习新鲜工具</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://JAZI6.github.io/"/>
+  <updated>2017-10-03T10:20:25.519Z</updated>
+  <id>https://JAZI6.github.io/</id>
+  
+  <author>
+    <name>JiaZhi-Chen</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML   meta标签的用途，属性，功能</title>
+    <link href="https://JAZI6.github.io/2017/09/22/HTML-meta%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E9%80%94%EF%BC%8C%E5%B1%9E%E6%80%A7%EF%BC%8C%E5%8A%9F%E8%83%BD/"/>
+    <id>https://JAZI6.github.io/2017/09/22/HTML-meta标签的用途，属性，功能/</id>
+    <published>2017-09-22T11:53:05.000Z</published>
+    <updated>2017-10-03T10:20:25.519Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关于meta的介绍"><a href="#关于meta的介绍" class="headerlink" title="关于meta的介绍"></a>关于meta的介绍</h2><h3 id="meta的用途"><a href="#meta的用途" class="headerlink" title="meta的用途"></a>meta的用途</h3><p>我认为meta就好比网页的明信片，它是网页html文档的从属介绍属性，那么当然一个网页可以有多个meta以便更好地介绍该网页相关信息给搜索引擎看。需要meta这样做的目的是为了SEO（搜索引擎优化）,也就是说meta和SEO是息息相关的，但SEO也不只看meta，它会具体解析网页其他东西以便抓取。</p><h3 id="meta的属性"><a href="#meta的属性" class="headerlink" title="meta的属性"></a>meta的属性</h3><p>属性有三个，分别是：</p><blockquote><p>name，content，http-equiv</p><h3 id="meta的功能"><a href="#meta的功能" class="headerlink" title="meta的功能"></a>meta的功能</h3><ol><li><em>name</em> :告诉搜索引擎这个meta的类型</li><li><em>content</em> :告诉搜索引擎关于name和http-equiv属性值的具体内容</li></ol></blockquote><p>以下是name的属性取值和content对应name属性值的内容的分析：</p><p>1 ) Keywords:关键字,即告诉搜索引擎,这个网页的主题是什么。<br>每个关键字之间,应该用用英文的逗号”,”分隔开。</p><blockquote><p>例如:</p><meta name="Keywords" content="关键字,关键字1,关键字2,关键字3,...,..."></blockquote><p>当数个meta元素提供文档语言的从属信息时,搜索引擎会使用lang特性来过滤并通过用户的语言优先参照来显示搜索结果。</p><blockquote><p>例如:</p><p><meta name="Kyewords" content="vacation,greece,sunshine"></p><meta name="Kyewords" content="vacances,grè:ce,soleil"></blockquote><p>2）Description:简介,即告诉搜索引擎,这个网页的大致内容。就好像Keywords是作文标题,Description再详细说一下作文的内容、优势等等。</p><blockquote><p>例如：<br>　　<meta name="Description" content="这个网页讲述了的META用法..."></p></blockquote><p>3）Robots:纯粹写给搜索引擎看的,因为Keywords和Description,人类还可以看懂,而Robots是非专业人士所无法理解的。<br>　　当name为Robots时,Content可选参数有<br>　　index:当前页面可以被抓取<br>　　follow:被当前页面内所链接的页面可以抓取<br>　　noindex:当前页面不可以被抓取<br>　　nofollow:被当前页面内所链接的页面不可以抓取<br>　　由于Content的内容可以是多选的,例如CONTENT=”INDEX,FOLLOW”,所以上述这四个参数,共可以组成4种不同的双选结果。</p><blockquote><p>例如：<br>　　<meta name="Robots" content="index,follow">可以写成<meta name="Robots" content="all"><br>　　<meta name="Robots" content="noindex,nofollow">可以写成<meta name="Robots" content="none"></p></blockquote><p>4）Author:作者,即告诉搜索引擎,这个页面的作者是谁,一般那种文章性质的页面,这个属性被应用得比较多。</p><blockquote><p>例如：</p><meta name="Author" content="czBin,11year@Gmail.com"></blockquote><p>5）Copyright:版权,告诉搜索引擎,这个页面的版权是属于谁的。</p><blockquote><p>例如：</p><meta name="Copyright" content="版权信息"></blockquote><p>6）Generator:制作软件,难道搜索引擎连这个也需要知道?用FrontPage和Dreamweaver制作出的页面,抓取方式不同吗，这个是我比较困惑的东西。</p><blockquote><p>例如：</p><meta name="Generator" content="PCDATA|FrontPage|"></blockquote><p>7）revisit-after:更新时间,即告诉搜索引擎,这个页面多长时间会更新,到时候,需要来重新抓取</p><blockquote><p>例如:</p><meta name="revisit-after" content="2 days"></blockquote><ol><li><em>http-equiv</em> :meta的http-equiv属性,其作用类似于http协议,它会告诉浏览器一些关于字符设定,页面刷新,cookie,和缓存等等相关信息。</li></ol><p>以下是http-equiv的属性取值和content对应http-equiv属性值的内容的分析：</p><p>1）Content-Type:声明页面所适用的的字符集,以及页面文档属性。</p><blockquote><p>例如:<br>　　<meta http-equiv="Content-Type" content="text/html; Charset=gb2312"><br>　　告诉浏览器,该页面为HTML类文档,并且,适用gb2312(中文)作为默认字符。</p></blockquote><p>2）Refresh:设置页面刷新或自动跳转的时间。</p><blockquote><p>例如:<br>　　<meta http-equiv="Refresh" content="60"><br>　　Content=”60”的意思是说,60秒后,页面刷新<br>　　<meta http-equiv="Refresh" content="10; Url=http://www.isinwin.cn"><br>　　Content=”10 的意思是说,10秒后,网页将自动跳转。</p></blockquote><p>3）Expires:设定网页的过期时间,当网页过期后,必须重新读取页面信息。</p><blockquote><p>例如:<br>　　<meta http-equiv="Expires" content="Fri, 15 Jun 2007 01:13:13 GMT"><br>　　<meta http-equiv="Expires" content="0"><br>　　时间格式必须为GMT标准时间,Content设置为0则代表该网页永不过期。</p></blockquote><p>4）Pragma:禁止浏览器缓存网页。</p><blockquote><p>例如:<br>　　<meta http-equiv="Pragma" content="No-cach"><br>　　禁止浏览器缓存页面（但是浏览者同样可以保存页面）</p></blockquote><p>5）Set-Cookie :设定cookie的过期时间。</p><blockquote><p>例如:<br>　　<meta http-equiv="Set-Cookie" content="cookievalue=xxx; expires=Wednesday,　21-Oct-98 16:14:21 GMT; path=/"></p></blockquote><p>6）Window-target:强制页面在当前窗口以独立页面显示。</p><blockquote><p>例如:<br>　　<meta http-equiv="Widow-target" content="_top"><br>　　这个属性是用来防止别人在框架里调用你的页面。Content选项:_blank、_top、_self、_parent。</p></blockquote><p><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a1pYWlpbXlpSW1lSKxoaRQgEBg" target="_blank" rel="external">有问题邮件探讨一下呗，点击这里</a><br><a href="https://www.jiazhi-chen.top" target="_blank" rel="external">我的博客链接，欢迎大家放心来参观和提建议</a><br> PS:好像有啥隐私设置，我又不是黑客，头大。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;关于meta的介绍&quot;&gt;&lt;a href=&quot;#关于meta的介绍&quot; class=&quot;headerlink&quot; title=&quot;关于meta的介绍&quot;&gt;&lt;/a&gt;关于meta的介绍&lt;/h2&gt;&lt;h3 id=&quot;meta的用途&quot;&gt;&lt;a href=&quot;#meta的用途&quot; class=&quot;he
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一个前端工程师的工作基本流程</title>
+    <link href="https://JAZI6.github.io/2017/09/21/%E4%B8%80%E4%B8%AA%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B/"/>
+    <id>https://JAZI6.github.io/2017/09/21/一个前端工程师的工作基本流程/</id>
+    <published>2017-09-21T10:46:41.000Z</published>
+    <updated>2017-10-03T10:20:40.127Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前端coder们需要干的工作"><a href="#前端coder们需要干的工作" class="headerlink" title="前端coder们需要干的工作"></a>前端coder们需要干的工作</h2><p>通常一个<em>大公司</em> 接了一个网页项目，经常需要</p><blockquote><p>需求分析 + 策划架构 + 交互设计（UX）+ 界面设计（UI ) + 前端开发 + 后端开发 + 运维测试</p></blockquote><p>那么我们大前端coder需要干什么呢？<br>总之，就是需要根据UX弄的原型图和UI整的设计图<br>去开发出网页，让上面的两张图变活！</p><p>具体开发过程基本如下：<br>（这里就不考虑一些工具，比如gulp自动化构建工具，webpack打包，vue开发框架，各种JS/CSS库什么的，我自己都还不太会，失望脸，尽量讲的通俗易懂一些,讲基本的呗）</p><p>1.根据UI的界面图进行切图（没错，PSD切图仔咯），这里切图其实也有自动化的工具，人类的懒惰真是好东西，嘿嘿嘿。</p><p>2.使用 <em>html</em> 对切出来的东西进行映射开发,做页面结构，看到几个部分就对应几个模块，从大到小，从外到内，从公共到独立。</p><p>3.使用 <em>css</em> 做样式设计，具体分析模块大小、位置、颜色，做盒模型等等。另外，可以分成三个组，一是重置样式，用于修改一些不合适的默认格式。二是公共样式，主要是头尾以及LOGO等很多页面都会用到的样式；三是独立样式，用于只使用一次的样式。</p><p>4.使用 <em>JS</em> 做交互动作，要不是有UX设计好的，我觉得每个前端coder都有一个大大的特效梦。当然，还需要根据与后端之前的讨论做数据传输接口。</p><p>5.自己debug一下啦，如果有bug当然要改咯。</p><p><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=a1pYWlpbXlpSW1lSKxoaRQgEBg" target="_blank" rel="external">有问题邮件探讨一下呗，点击这里</a><br><a href="https://www.jiazhi-chen.top" target="_blank" rel="external">我的博客链接，欢迎大家来参观和提建议</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前端coder们需要干的工作&quot;&gt;&lt;a href=&quot;#前端coder们需要干的工作&quot; class=&quot;headerlink&quot; title=&quot;前端coder们需要干的工作&quot;&gt;&lt;/a&gt;前端coder们需要干的工作&lt;/h2&gt;&lt;p&gt;通常一个&lt;em&gt;大公司&lt;/em&gt; 接了一个网
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我想变得更好</title>
+    <link href="https://JAZI6.github.io/2017/09/16/%E6%88%91%E6%83%B3%E5%8F%98%E5%BE%97%E6%9B%B4%E5%A5%BD/"/>
+    <id>https://JAZI6.github.io/2017/09/16/我想变得更好/</id>
+    <published>2017-09-16T12:06:09.000Z</published>
+    <updated>2017-10-03T10:20:33.103Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="我的博客小窝"><a href="#我的博客小窝" class="headerlink" title="我的博客小窝"></a>我的博客小窝</h2><p>要搭建博客的话其实手把手自己搭建，应该是如下步骤：</p><p>1.买域名（门牌号，我推荐阿里云，很不错）<br>2.买服务器（控制博客网站正常运行，需要全天候无死角都在运行，一关闭，博客进不去！然后呢，你去购买的服务器就可以一直运行，不用你开机维护什么的，分类的话，有的服务器是像apache这样的，你还需要搞个数据库，自己写脚本，超强程序员好像都这么干；另一种是像wamp这种的集成好的，wamp大致可以等于apache+数据库+脚本后台语言）<br>3.写代码呗，写博客网页代码，从前端到后台，全部自己干。（需要用购买的服务器的本地域名测试一下代码行不行）<br>4.购买的域名解析映到服务器地址。</p><p>我的这个博客呢是通过github（搞定服务器，而且这个服务器还是像wamp这种集成的）+hexo（静态网站生成器，相当于博客前端的代码）搭建的，你这样做呢，123步骤全省了，我觉得这应该是当前时代里比较流行的省钱的博客搭建方式了（嘿嘿嘿，偷笑脸！），自己买了个阿里云.top域名，解析映射一下，没毛病，可以跑了！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;我的博客小窝&quot;&gt;&lt;a href=&quot;#我的博客小窝&quot; class=&quot;headerlink&quot; title=&quot;我的博客小窝&quot;&gt;&lt;/a&gt;我的博客小窝&lt;/h2&gt;&lt;p&gt;要搭建博客的话其实手把手自己搭建，应该是如下步骤：&lt;/p&gt;
+&lt;p&gt;1.买域名（门牌号，我推荐阿里云，很不错）
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
